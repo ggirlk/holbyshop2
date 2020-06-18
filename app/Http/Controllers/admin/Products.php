@@ -11,7 +11,12 @@ class Products extends Controller
 	public function showProducts()
 	{
 		$prods = DB::table('products')->get();
-		return view('admin.products', ['prods' => $prods]);
+		$products = [];
+		foreach ($prods as $val) {
+			$products[] = $val;
+		}
+		
+		return view('admin.products', ['prods' => $products]);
 	}
     public function addProducts(/*Request $r*/)
     {

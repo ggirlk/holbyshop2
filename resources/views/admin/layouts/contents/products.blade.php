@@ -13,7 +13,7 @@
                 <thead class="text-primary">
                   <th></th>
                   <th>
-                    sku
+                    SKU
                   </th>
                   <th>
                     Name
@@ -32,24 +32,32 @@
                   </th>
                 </thead>
                 <tbody>
+                @foreach($prods as $prod)                
                   <tr>
                     <td>
                       1
                     </td>
                     <td>
-                      Dakota Rice
+                      {{$prod->sku}}
                     </td>
                     <td>
-                      Niger
+                      {{$prod->name}}
                     </td>
                     <td>
-                      Oud-Turnhout
+                      {{$prod->quantity}}
+                    </td>
+                    <td>
+                      {{$prod->sellPrice}}
                     </td>
                     <td class="text-primary">
-                      $36,738
+                      <img src='{{ "../../admin/imgs/".$prod->img1}}' class="img-thumbnail" style="width: 100px" alt="">
                     </td>
+                    <td>
+                     2
+                    </td>
+                    
                   </tr>
-                  
+                @endforeach
                 </tbody>
               </table>
             </div>
