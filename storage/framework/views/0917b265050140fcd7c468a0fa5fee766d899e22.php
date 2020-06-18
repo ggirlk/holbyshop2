@@ -18,4 +18,4 @@
 
 </head>
 <body class="">
-  <div class="wrapper ">
+  <div class="wrapper "><?php /**PATH C:\xampp\htdocs\hshop\resources\views/admin/layouts/head.blade.php ENDPATH**/ ?>

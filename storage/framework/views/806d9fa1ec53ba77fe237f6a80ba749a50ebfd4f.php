@@ -31,32 +31,36 @@
                   </th>
                 </thead>
                 <tbody>
-                @foreach($prods as $prod)                
+                <?php $__currentLoopData = $prods; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $prod): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>                
                   <tr>
                     <td>
                       1
                     </td>
                     <td>
-                      {{$prod->sku}}
+                      <?php echo e($prod->sku); ?>
+
                     </td>
                     <td>
-                      {{$prod->name}}
+                      <?php echo e($prod->name); ?>
+
                     </td>
                     <td>
-                      {{$prod->quantity}}
+                      <?php echo e($prod->quantity); ?>
+
                     </td>
                     <td>
-                      {{$prod->sellPrice}}
+                      <?php echo e($prod->sellPrice); ?>
+
                     </td>
                     <td class="text-primary">
-                      <img src='{{ "../../admin/imgs/".$prod->img1}}' class="img-thumbnail" style="width: 100px" alt="">
+                      <img src='<?php echo e("../../admin/imgs/".$prod->img1); ?>' class="img-thumbnail" style="width: 100px" alt="">
                     </td>
                     <td>
                      2
                     </td>
                     
                   </tr>
-                @endforeach
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </tbody>
               </table>
             </div>
@@ -66,4 +70,4 @@
 
     </div>
   </div>
-</div>
+</div><?php /**PATH C:\xampp\htdocs\hshop\resources\views/admin/layouts/contents/products.blade.php ENDPATH**/ ?>
